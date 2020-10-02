@@ -1,0 +1,40 @@
+---
+title: "914 Fallos de Jurisprudencia de SCBA"
+subtitle: Tablas para la explotación de datos con NLU
+output:
+  pdf_document: default
+  html_notebook: default
+  html_document:
+    df_print: paged
+---
+
+```{r, message=FALSE, warning=FALSE}
+source("~/NLU_legal_domain/R/informe.R")
+library(jsonlite)
+library(DataExplorer)
+library(qdapRegex)
+library(skimr)
+tbdoctrina <- fromJSON(txt = "~/NLU_legal_domain/data/tbdoctrina.json") 
+tbmetdat <- fromJSON(txt = "~/NLU_legal_domain/data/tbmetdat.json") 
+tbfallos <- fromJSON(txt = "~/NLU_legal_domain/data/tbfallos.json") 
+
+```
+
+# Exploración de tablas
+
+```{r}
+str(tbmetdat)
+#skim(tbmetdat)
+```
+
+```{r}
+str(tbdoctrina)
+#skim(tbdoctrina)
+```
+
+```{r}
+str(tbfallos)
+#skim(tbfallos)
+```
+
+
