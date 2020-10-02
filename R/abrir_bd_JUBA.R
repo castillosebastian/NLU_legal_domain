@@ -37,3 +37,15 @@ corpus_fallosdoctrina <- tbdoctrina %>%
   semi_join(corpus_fallostext, by = "nro_causa")
 
 
+# guardo resultados
+tabladoctrina <- toJSON(corpus_fallosdoctrina)
+tablametadat <- toJSON(corpus_fallosmetdat)
+tablafallos <- toJSON(corpus_fallostext)
+
+write(tabladoctrina, "tbdoctrina.json")
+write(tablametadat, "tbmetdat.json")
+write(tablafallos, "tbfallos.json")
+
+
+
+
